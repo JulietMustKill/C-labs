@@ -23,3 +23,23 @@ int main()
     }
     return 0;
 }
+\\\\\\\\\\\\\\\\\\\\\\\\\\\
+Рекурсия
+#include <stdio.h>
+#include <math.h>
+float step(int a, int b){
+    int res;
+    if(a>0)
+    {res = pow(a, b);}
+    else{
+        res = pow(1/a, -b);}
+        return res;
+}
+int main(){
+    int x, y;
+    printf("Число-");
+    scanf("%d", &x);
+    printf("Степень-");
+    scanf("%d", &y);
+    float Recursion = step(x,y);
+    printf("Recursion %.2f\n", Recursion);}
