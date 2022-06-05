@@ -14,7 +14,7 @@ int main()
     else{
         res = pow(1/x, -y);
         printf("res->%d\n", res);}
-int resss;
+    int resss;
     int ress=x;
     for(int i=1; i <= y; i++)
     {
