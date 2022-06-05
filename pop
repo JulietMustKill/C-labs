@@ -43,3 +43,16 @@ int main(){
     scanf("%d", &y);
     float Recursion = step(x,y);
     printf("Recursion %.2f\n", Recursion);}
+\\\\\\\\\\\\\\\\\\\
+int main(){
+    int a;
+    int b;
+    scanf("%d", &a);
+ while(a%2==0){
+    a = a / 2;
+     printf("stepen %d", a);
+     if(a==1)
+         printf("noy");
+     else
+         printf("yes");
+ }
