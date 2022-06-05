@@ -1,20 +1,25 @@
-Лаб-5(5в)1
+Лаб-5(5в)
 #include <stdio.h>
 #include <math.h>
 int main()
 {
-    float x, y, res;
+    int x, y, res;
     printf("Число-");
-    scanf("%f", &x);
+    scanf("%d", &x);
     printf("Степень-");
-    scanf("%f", &y);
+    scanf("%d", &y);
     if(y>0)
     {res = pow(x, y);
-    printf("res-> %.1f", res);}
+    printf("res-> %d\n", res);}
     else{
         res = pow(1/x, -y);
-        printf("res-> %.5f", res);
+        printf("res->%d\n", res);}
+int resss;
+    int ress=x;
+    for(int i=1; i <= y; i++)
+    {
+        resss =ress * ress;
+        printf("resss->%d\n", resss);
     }
     return 0;
 }
-
