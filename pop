@@ -56,3 +56,25 @@ int main(){
      else
          printf("yes");
  }
+ ........................
+ Тело для 6 лабы 
+ #include <stdio.h>
+#include <math.h>
+#include<time.h>
+#include "stdio.h"
+void fill(int n, ){//функция будет проверять есть ли одинаковые значения у 1-го и 2-го массива
+
+}
+void rgg(){//создаст 3-ий массив из результата функции fill
+
+}
+int main(){
+    int n;
+    printf("n->");
+    scanf("%d", &n);
+    int A[n];   //создаём первый массив размером n
+    int f;
+    printf("f->");
+    scanf("%d", &f);
+    int B[f];   //создаём второй массив размером f
+}
