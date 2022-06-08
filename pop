@@ -102,3 +102,27 @@ int main(){
     fill(3, one, 3, two);
     return 0;
 }
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+Попытка 1
+#include <stdio.h>
+#include <math.h>
+#include<time.h>
+#include "stdio.h"
+void fill(int n, int A[], int f, int B[]){//функция будет проверять есть ли одинаковые значения у 1-го и 2-го массива
+    for (int i=0; A[n]> i; i++)
+{
+    int a= A[n];
+    for (int j=0; j< B[f];j++)
+    {
+        if (a==B[f]){
+            printf(a);
+        }
+    }
+}
+}
+int main(){
+    char one[3]={'1','3','5'};
+    char two[3]={'3','6','9'};
+    fill(3, one, 3, two);
+    return 0;
+} \\ничего не выводит
