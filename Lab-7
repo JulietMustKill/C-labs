@@ -49,3 +49,14 @@ int main()
   printf("\nМатрица A:\n");
   generate_arr(i, j, A);
   print_matrix(i, j, A);
+int B[i][j];
+  printf("Матрица B:\n");
+  generate_arr(i, j, B);
+  print_matrix(i, j, B);
+
+  // Сложение матриц A и B
+  int AB[i][j];
+  printf("Матрица A+B:\n");
+  sum_AB(i, j, A, B, AB);
+  print_matrix(i, j, AB);
+return 0;}
