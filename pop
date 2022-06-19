@@ -126,3 +126,34 @@ int main(){
     fill(3, one, 3, two);
     return 0;
 } \\ничего не выводит
+...................................
+#include "stdio.h"
+#include "stdlib.h"
+#include "time.h"
+#include <stdio.h>
+int main() {
+    int i, j;
+    int B[3][3];
+    int A[3][3];
+
+    for (i = 0; i < 3; i++) {
+        for (j = 0; j < 3; j++)
+            A[i][j] = rand() % 10;}
+        printf("Получившиеся массивы:\n");
+        for (i = 0; i < 3; i++) {
+            for (j = 0; j < 3; j++) {
+                printf("[%d][%d]=%d ", i, j, A[i][j]);
+            }}
+    for (i = 0; i < 3; i++) {
+        for (j = 0; j < 3; j++)
+            B[i][j] = rand() % 10;
+    }
+        printf("\n");
+        for (i = 0; i < 3; i++) {
+            for (j = 0; j < 3; j++) {
+                printf("[%d][%d]=%d ", i, j, B[i][j]);
+            }
+            printf("\n");
+        }
+        getchar();
+}\\выводит 2 массива (1 из котороговыводится только в 1 строку)
