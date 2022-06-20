@@ -1,4 +1,54 @@
 //Третий вариант "Найти сумму 2-х матриц"
+#include "stdio.h"
+#include "stdlib.h"
+#include "time.h"
+int one(int a, int b){//будут создаваться матрицы
+    int i,j;
+    int S[a][b];
+    int V[a][b];
+    for (i = 0; i < a; i++) {
+        for (j = 0; j < b; j++)
+            S[i][j] = rand() % 10;
+            V[i][j] = rand() % 10;
+    }
+        printf("Первая матрица:\n");
+        for (i = 0; i < a; i++) {
+            for (j=0 ; j < b; j++) {
+                printf("[%d][%d]=%d ", a, b, S[i][j]);
+            }
+            printf("\n");}
+        printf("\n");
+        printf("Вторая матрица:\n");
+        for (i = 0; i < a; i++) {
+            for (j = 0; j < b; j++) {
+               printf("[%d][%d]=%d ", a, b, V[i][j]);
+           }
+            printf("\n");
+      }
+    printf("\n");
+    printf("Сумма матриц A и B\n");
+    int C[i][j];
+    for (i = 0; i < a; ++i)
+        for (j = 0; j < b; ++j)
+            C[i][j] = S[i][j] + V[i][j];
+    // выводим результат
+    for ( i = 0; i < a; ++i) {
+        for (j = 0; j < b; ++j){
+            printf("[%d][%d]=%d ", a, b, C[i][j]);
+        }
+        printf("\n");
+    }
+
+}
+int main(){
+ int m,n;
+    scanf("%d", &m); //ввод размеров матрицы
+    scanf("%d", &n);
+    int mat=one( m, n);
+    printf(mat);
+}
+...........................................................................................................................................................................
+//Первая попытка
 //Две матрицы 3х3 с рандомными числами 
 #include "stdio.h"
 #include "stdlib.h"
