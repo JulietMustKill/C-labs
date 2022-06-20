@@ -3,7 +3,6 @@
 #include "stdio.h"
 #include "stdlib.h"
 #include "time.h"
-#include <stdio.h>
 int main() {
     int i, j;
     int B[3][3];
