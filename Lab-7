@@ -14,27 +14,26 @@ int one(int a, int b){//будут создаваться матрицы
         printf("Первая матрица:\n");
         for (i = 0; i < a; i++) {
             for (j=0 ; j < b; j++) {
-                printf("[%d][%d]=%d ", a, b, S[i][j]);
+                printf("[%d][%d]=%d ", i, j, S[i][j]);
             }
             printf("\n");}
         printf("\n");
         printf("Вторая матрица:\n");
         for (i = 0; i < a; i++) {
             for (j = 0; j < b; j++) {
-               printf("[%d][%d]=%d ", a, b, V[i][j]);
+               printf("[%d][%d]=%d ", i, j, V[i][j]);
            }
             printf("\n");
-      }
-    printf("\n");
-    printf("Сумма матриц A и B\n");
-    int C[i][j];
+      }printf("\n");
+    printf("Сумма матриц S и V\n");
+    int C[a][b];
     for (i = 0; i < a; ++i)
-        for (j = 0; j < b; ++j)
+        for (j= 0; j < b; ++j)
             C[i][j] = S[i][j] + V[i][j];
     // выводим результат
     for ( i = 0; i < a; ++i) {
         for (j = 0; j < b; ++j){
-            printf("[%d][%d]=%d ", a, b, C[i][j]);
+            printf("[%d][%d]=%d ", i, j, C[i][j]);
         }
         printf("\n");
     }
@@ -46,4 +45,5 @@ int main(){
     scanf("%d", &n);
     int mat=one( m, n);
     printf(mat);
+    return 0;
 }
