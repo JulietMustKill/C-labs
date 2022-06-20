@@ -157,3 +157,39 @@ int main() {
         }
         getchar();
 }\\выводит 2 массива (1 из котороговыводится только в 1 строку)
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+//Половина 7 лабы
+#include "stdio.h"
+#include "stdlib.h"
+#include "time.h"
+float one(int a, int b){//будут создаваться матрицы
+    int i,j;
+    int S[a][b];
+    int V[a][b];
+    for (i = 0; i < a; i++) {
+        for (j = 0; j < b; j++)
+            S[i][j] = rand() % 10;
+            V[i][j] = rand() % 10;}
+        printf("Первая матрица:\n");
+        for (i = 0; i < a; i++) {
+            for (j=0 ; j < b; j++) {
+                printf("[%d][%d]=%d ", a, b, S[i][j]);
+            }
+            printf("\n");}
+        printf("\n");
+        printf("Вторая матрица:\n");
+        for (i = 0; i < a; i++) {
+            for (j = 0; j < b; j++) {
+               printf("[%d][%d]=%d ", a, b, V[i][j]);
+           }
+            printf("\n");
+      }
+
+}
+int main(){
+ int m,n;
+    scanf("%d", &m); //ввод размеров матрицы
+    scanf("%d", &n);
+    int mat=one( m, n);
+    printf(mat);
+}
