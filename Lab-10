@@ -1,0 +1,61 @@
+#include <stdio.h>
+#include <stdlib.h>
+int *gen_adrr(int i, int j) {
+    int *A = (int *)malloc(i * j * sizeof(int));
+    if (!A) {
+        printf("Memory allocation error!\n");
+        exit(EXIT_FAILURE);
+    }
+    return A;
+}
+int one(int a, int b, int S[][b], int V[][b]){//будут создаваться матрицы
+    int i=0;
+    int j=0;
+    for (i = 0; i < a; i++) {
+        for (j = 0; j < b; j++)
+            S[i][j] = rand() % 10;}
+    for (i = 0; i < a; i++) {
+        for (j = 0; j < b; j++)
+            V[i][j] = rand() % 10;
+    }
+    printf("Первая матрица:\n");
+    for (i = 0; i < a; i++) {
+        for (j=0 ; j < b; j++) {
+            printf("[%d][%d]=%d ", i, j, S[i][j]);
+        }
+        printf("\n");}
+    printf("\n");
+    printf("Вторая матрица:\n");
+    for (i = 0; i < a; i++) {
+        for (j = 0; j < b; j++) {
+            printf("[%d][%d]=%d ", i, j, V[i][j]);
+        }
+        printf("\n");
+    }printf("\n");
+    printf("Сумма матриц S и V\n");
+    int C[a][b];
+    for (i = 0; i < a; ++i)
+        for (j= 0; j < b; ++j)
+            C[i][j] = S[i][j] + V[i][j];
+    // выводим результат
+    for ( i = 0; i < a; ++i) {
+        for (j = 0; j < b; ++j){
+            printf("[%d][%d]=%d ", i, j, C[i][j]);
+        }
+        printf("\n");
+    }
+
+}
+int main(){
+    int a, b;
+    int i=0;
+    int j=0;
+    int *S=gen_adrr(i, j);
+    int *V=gen_adrr(i, j);
+    scanf("%d", &i); //ввод размеров матрицы
+    scanf("%d", &j);
+    int mat=one(i, j, S, V);
+    printf(mat);
+free(S);
+free(V);
+return 0;}
