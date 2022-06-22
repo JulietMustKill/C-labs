@@ -1,0 +1,34 @@
+//5variant
+#include <stdio.h>
+#include <string.h>
+#include <termios.h>
+#include <unistd.h>
+#include <ctype.h>
+
+int mygetch() {
+    struct termios oldt, newt;
+    int c;
+    tcgetattr(STDIN_FILENO, &oldt);
+    newt = oldt;
+    newt.c_lflag &= ~(ICANON | ECHO);
+    tcsetattr(STDIN_FILENO, TCSANOW, &newt);
+    c = getchar();
+    tcsetattr(STDIN_FILENO, TCSANOW, &oldt);
+    return c;
+}
+
+int main(){
+    printf("Введите ");
+    unsigned char c;
+    for (;;){
+      c = mygetch();
+      printf("%c", c);
+      if (mygetch() == 27)
+        break;
+      if (isdigit(c))
+        printf("\nВещественное число\n");
+      else
+        printf("\nНе число\n");
+    }
+    return 0;
+}
